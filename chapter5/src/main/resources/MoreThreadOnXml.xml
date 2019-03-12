@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<suite name="thread" parallel="class" thread-count="3">
+    <!--methond所有用例可以在不同线程中执行，但不能指定线程池
+    tests:相同的test tag下的测试用例只能在同一线程中执行
+          不同的test tag下的测试用例能在不同线程中执行
+    class:相同的class tag下的测试用例在同一线程中执行
+          不同的class tag下的测试用例能在不同线程中执行
+    ？-->
+   <test name="test1" >
+       <classes>
+           <class name="com.course.testng.moreThreads.MoreThreadOnXml"/>
+           <class name="com.course.testng.BasicAnnotation"/>
+       </classes>
+   </test>
+    <test name="test2" >
+        <classes>
+            <class name="com.course.testng.BasicAnnotation"/>
+        </classes>
+    </test>
+</suite>
